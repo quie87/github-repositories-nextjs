@@ -12,6 +12,9 @@ type repo = {
 
 async function fetchRepos() {
     const response = await fetch('https://api.github.com/users/quie87/repos');
+
+    await new Promise(resolve => setTimeout(resolve, 1000)); // delay for 1 sec just to display the loading state (spinner)
+
     return await response.json();
 }
 
