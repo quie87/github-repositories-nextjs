@@ -1,11 +1,21 @@
-import styles from './page.module.css'
+import React from 'react'
+import Link from 'next/link'
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <h1>Testing NextJS</h1>
-      </div>
-    </main>
+    <div>
+      <h1>Welcome to KTR Web development</h1>
+        <ul>
+            <li>
+                <Link href="/home">Home</Link>
+            </li>
+            <li>
+                <Link href="/about">About</Link>
+            </li>
+            <li>
+                <Link href="/about/team">Team</Link>
+            </li>
+        </ul>
+    </div>
   )
 }
