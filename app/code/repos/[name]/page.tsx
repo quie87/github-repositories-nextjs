@@ -1,7 +1,7 @@
 import { Suspense } from 'react'
 import Link from 'next/link'
 import Repo from '@/app/components/Repo'
-import RepoDirs from '@/app/components/RepoDirs'
+import RepoDirs from '@/app/components/RepoDirectories'
 
 type props = {
     params: {
