@@ -18,7 +18,7 @@ async function fetchRepos() {
     return await response.json();
 }
 
-const ReposPage = async () => {
+export default async () => {
     const repos = await fetchRepos();
 
     return (
@@ -51,5 +51,3 @@ const ReposPage = async () => {
         </div>
     )
 }
-
-export default ReposPage

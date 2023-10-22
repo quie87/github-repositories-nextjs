@@ -1,8 +1,8 @@
 'use client'
 import { useState, useEffect } from 'react'
-import { Posts } from './components/Posts'
+import Posts from './components/Posts'
 import LoadingPage from './loading'
-import { PostsSearch } from './components/PostsSearch'
+import PostsSearch from './components/PostsSearch'
 
 export default function Home() {
   const [posts, setPosts] = useState<IPost[]>([])

@@ -2,7 +2,7 @@ interface props {
     posts: IPost[]
 }
 
-export const Posts = ({ posts }: props) => {
+export default ({ posts }: props) => {
     return (
         <div className='posts'>
             {posts.map((post: IPost) => (

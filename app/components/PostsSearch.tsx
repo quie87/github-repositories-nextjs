@@ -6,7 +6,7 @@ type props = {
     getSearchResults: (posts: IPost[]) => void
 }
 
-export const PostsSearch = ({ getSearchResults }: props) => {
+export default ({ getSearchResults }: props) => {
     const [query, setQuery] = useState('')
 
     const handleSubmit = async (event: React.FormEvent) => {

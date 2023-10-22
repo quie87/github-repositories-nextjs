@@ -1,15 +1,15 @@
 import { Suspense } from 'react'
 import Link from 'next/link'
-import { Repo } from '@/app/components/Repo'
-import { RepoDirs } from '@/app/components/RepoDirectories'
+import Repo from '@/app/components/Repo'
+import RepoDirs from '@/app/components/RepoDirectories'
 
-type props = {
+interface props {
     params: {
         name: string
     }
 }
 
-export const RepoPage = ({ params: { name } }: props) => {
+export default ({ params: { name } }: props) => {
     return (
         <div className='card'>
             <Link href="/code/repos" className='btn btn-back'>Back To Repositories</Link>
