@@ -1,5 +1,5 @@
-import React from 'react'
-import Posts from './components/Posts'
+'use client'
+import { useState, useEffect } from 'react'
 
 export default function Home() {
   return (
