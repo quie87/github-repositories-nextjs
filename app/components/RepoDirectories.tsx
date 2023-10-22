@@ -15,11 +15,15 @@ interface Props {
 
 interface Directory {
     path: string;
+    _links: {
+        html: string
+    }
 }
 
 export default async ({ name }: Props) => {
     const contents = await fetchRepoContents(name)
     const dires = contents.filter((item: any) => item.type === 'dir')
+    console.log(dires)
 
     return (
         <>
@@ -27,7 +31,7 @@ export default async ({ name }: Props) => {
             <ul>
                 {dires.map((directory: Directory) => (
                     <li key={directory.path}>
-                        <Link href={`/code/repos/${name}/${directory.path}`}>{directory.path}</Link>
+                        <Link href={`${directory._links.html}`} target="_blank">{directory.path}</Link>
                     </li>
                 ))}
             </ul>
