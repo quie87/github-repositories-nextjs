@@ -1,7 +1,7 @@
 import { Suspense } from 'react'
 import Link from 'next/link'
-import Repo from '@/app/components/Repo'
-import RepoDirs from '@/app/components/RepoDirectories'
+import { Repo } from '@/app/components/Repo'
+import { RepoDirs } from '@/app/components/RepoDirectories'
 
 type props = {
     params: {
@@ -9,7 +9,7 @@ type props = {
     }
 }
 
-const RepoPage = ({ params: { name } }: props) => {
+export const RepoPage = ({ params: { name } }: props) => {
     return (
         <div className='card'>
             <Link href="/code/repos" className='btn btn-back'>Back To Repositories</Link>
@@ -22,4 +22,3 @@ const RepoPage = ({ params: { name } }: props) => {
         </div>
     )
 }
-export default RepoPage

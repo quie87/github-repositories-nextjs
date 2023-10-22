@@ -13,7 +13,7 @@ type props = {
     name: string
 }
 
-const Repo = async ({ name }: props) => {
+export const Repo = async ({ name }: props) => {
     const repo = await fetchRepo(name);
 
     return (
@@ -37,5 +37,3 @@ const Repo = async ({ name }: props) => {
         </>
     )
 }
-
-export default Repo

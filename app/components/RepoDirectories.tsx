@@ -17,7 +17,7 @@ interface Directory {
     path: string;
 }
 
-const RepoDirs = async ({ name }: Props) => {
+export const RepoDirs = async ({ name }: Props) => {
     const contents = await fetchRepoContents(name)
     const dires = contents.filter((item: any) => item.type === 'dir')
 
@@ -34,5 +34,3 @@ const RepoDirs = async ({ name }: Props) => {
         </>
     )
 }
-
-export default RepoDirs

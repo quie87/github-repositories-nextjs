@@ -5,7 +5,7 @@ type post = {
     userId: string,
 }
 
-async function fetchPosts() {
+export const Posts = ({ posts }: props) => {
     const response = await fetch('http://localhost:3000/api/posts');
 
     return await response.json();
@@ -25,5 +25,3 @@ const Posts = async () => {
         </div>
     )
 }
-
-export default Posts
